@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#BSUB -J gan_model
+#BSUB -n 2
+#BSUB -R "span[ptile=4]"
+#BSUB -q gpu
+#BSUB -e %J.err
+#BSUB -o %J.out
+
+module load cuda
+python3 gan_model_ver3.py
